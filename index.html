@@ -140,18 +140,22 @@
     .video-box {
       aspect-ratio: 16 / 9;
       border-radius: 32px;
-      background:
-        linear-gradient(135deg, rgba(189, 185, 106, 0.55), rgba(207, 109, 252, 0.28)),
-        var(--cream);
+      background: linear-gradient(135deg, rgba(189, 185, 106, 0.55), rgba(207, 109, 252, 0.28)), var(--cream);
       box-shadow: var(--soft-shadow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-      text-align: center;
       border: 1px solid rgba(23, 23, 23, 0.10);
-      font-size: 24px;
-      font-weight: 700;
+      
+      /* We remove the padding and text settings, and add this instead: */
+      overflow: hidden; /* This is the magic trick that keeps the video inside your 32px rounded corners! */
+      display: flex;
+    }
+    
+    /* This new block tells the actual video how to behave inside the box */
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* This makes sure the video fills the 16/9 box without squishing */
+      border: none;
+      outline: none;
     }
 
     .grid {
