@@ -143,12 +143,6 @@
       background: linear-gradient(135deg, rgba(189, 185, 106, 0.55), rgba(207, 109, 252, 0.28)), var(--cream);
       box-shadow: var(--soft-shadow);
       border: 1px solid rgba(23, 23, 23, 0.10);
-      <div class="video-box">
-        <video controls>
-          <source src="Video_Project_kleiner.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
       /* We remove the padding and text settings, and add this instead: */
       overflow: hidden; /* This is the magic trick that keeps the video inside your 32px rounded corners! */
       display: flex;
@@ -263,7 +257,7 @@
       <div class="label">AI · VR · Learning</div>
       <h1>Welcome to TreeTalky AI/VR</h1>
       <p class="subtitle">Where Artificial Intelligence meets immersive VR for learning</p>
-
+      
       <nav aria-label="Page sections">
         <a href="#video">Video</a>
         <a href="#biographies">Biographies</a>
@@ -287,7 +281,10 @@
     <section id="video">
       <h2>Video</h2>
       <div class="video-box">
-        Let’s Play Video will be embedded here.
+        <video controls>
+          <source src="Video_Project_kleiner.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </section>
 
